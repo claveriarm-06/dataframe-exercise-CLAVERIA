@@ -77,44 +77,44 @@ new_row = {
 
 # #Exercise 4:
 # # Step 2: Append to DataFrame
-# new_row_df = pd.DataFrame([new_row])
-# df = pd.concat([df, new_row_df], ignore_index=True)
+new_row_df = pd.DataFrame([new_row])
+df = pd.concat([df, new_row_df], ignore_index=True)
 
 # # Step 3: Recalculate Total
-# df["Total"] = df["Quantity"] * df["Price"]
+df["Total"] = df["Quantity"] * df["Price"]
 
 # # Step 4: Show last 3 rows
-# print(df.tail(3))
+print(df.tail(3))
 
 # #Exercise 5:
 # # Step 1: Update price of Mouse products
-# df.loc[df["Product"] == "Mouse", "Price"] = df.loc[df["Product"] == "Mouse", "Price"] + 30
+df.loc[df["Product"] == "Mouse", "Price"] = df.loc[df["Product"] == "Mouse", "Price"] + 30
 
 # # Step 2: Recalculate Total for affected rows
-# df["Total"] = df["Quantity"] * df["Price"]
+df["Total"] = df["Quantity"] * df["Price"]
 
 # # Step 3: Show only Mouse rows
-# print(df[df["Product"] == "Mouse"])
+print(df[df["Product"] == "Mouse"])
 
 # #Exercise 6:
 # # Step 1: Drop Discount column
-# df = df.drop(columns=["Discount"])
+df = df.drop(columns=["Discount"])
 
 # # Step 2: Drop FinalTotal column
-# df = df.drop(columns=["FinalTotal"])
+df = df.drop(columns=["FinalTotal"])
 
 # # Step 3: Show updated DataFrame
-# print(df.head())
+print(df.head())
 
 # #Exercise 7:
 # # Step 1: Drop row with OrderID = 1010
-# df = df.drop(df[df["OrderID"] == 1010].index, axis=0)
+df = df.drop(df[df["OrderID"] == 1010].index, axis=0)
 
 # # Step 2: Drop the first row by index
-# df = df.drop(index=0)
+df = df.drop(index=0)
 
 # # Step 3: Print new shape
-# print("New shape:", df.shape)
+print("New shape:", df.shape)
 
 # #Exerise 8:
 # #Step 1: Electronics with Quantity >= 3
