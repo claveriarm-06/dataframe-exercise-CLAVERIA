@@ -49,31 +49,31 @@ print("Shape:", df.shape)
 
 # #Exercise 2:
 # # Step 4: Show column names
-# print("Columns:", list(df.columns))
+print("Columns:", list(df.columns))
 
 # # Calculate Total column
-# df["Total"] = df["Quantity"] * df["Price"]
+df["Total"] = df["Quantity"] * df["Price"]
 
 # # Step 1: Add Discount column (10% if Quantity >= 5 else 0)
-# df["Discount"] = df.apply(lambda row: row["Total"] * 0.10 if row["Quantity"] >= 5 else 0, axis=1)
+df["Discount"] = df.apply(lambda row: row["Total"] * 0.10 if row["Quantity"] >= 5 else 0, axis=1)
 
 # #Exercise 3:
 # # Step 2: Add FinalTotal column (Total - discount)
-# df["FinalTotal"] = df["Total"] - df["Discount"]
+df["FinalTotal"] = df["Total"] - df["Discount"]
 
 # # Step 3: Show selected columns
-# print(df[["OrderID", "Product", "Total", "Discount", "FinalTotal"]].to_string())
+print(df[["OrderID", "Product", "Total", "Discount", "FinalTotal"]].to_string())
 
 # # Step 1: Create new record
-# new_row = {
-#     "OrderID": 1021,
-#     "Product": "Tablet",
-#     "Category": "Electronics",
-#     "Quantity": 2,
-#     "Price": 450,
-#     "Customer": "Victor",
-#     "Region": "East"
-# }
+new_row = {
+    "OrderID": 1021,
+    "Product": "Tablet",
+    "Category": "Electronics",
+    "Quantity": 2,
+    "Price": 450,
+    "Customer": "Victor",
+    "Region": "East"
+}
 
 # #Exercise 4:
 # # Step 2: Append to DataFrame
