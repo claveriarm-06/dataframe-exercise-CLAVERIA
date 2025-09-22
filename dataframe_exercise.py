@@ -118,48 +118,48 @@ print("New shape:", df.shape)
 
 # #Exerise 8:
 # #Step 1: Electronics with Quantity >= 3
-# result1 = df[(df["Category"] == "Electronics") & (df["Quantity"] >= 3)]
-# print(result1)
+result1 = df[(df["Category"] == "Electronics") & (df["Quantity"] >= 3)]
+print(result1)
 
 # # Step 2: Products with Price > 500
-# result2 = df[df["Price"] > 500]
-# print(result2)
+result2 = df[df["Price"] > 500]
+print(result2)
 
 # # Step 3: Count orders from North region
-# count_north = df[df["Region"] == "North"].shape[0]
-# print("North orders:", count_north)
+count_north = df[df["Region"] == "North"].shape[0]
+print("North orders:", count_north)
 
 # #Exercise 9:
 # # Step 1: Sales in West region
-# west_sales = df[df["Region"] == "West"]
-# print(west_sales)
+west_sales = df[df["Region"] == "West"]
+print(west_sales)
 
 # # Step 2: Sales by Alice
-# alice_sales = df[df["Customer"] == "Alice"]
-# print(alice_sales)
+alice_sales = df[df["Customer"] == "Alice"]
+print(alice_sales)
 
 # # Step 3: Sales of Laptop or Printer
-# subset_sales = df[df["Product"].isin(["Laptop", "Printer"])]
-# print(subset_sales)
+subset_sales = df[df["Product"].isin(["Laptop", "Printer"])]
+print(subset_sales)
 
 # #Exercise 10:
 # # Step 1: Increase Price of Furniture by 10%
-# df.loc[df["Category"] == "Furniture", "Price"] *= 0.10
+df.loc[df["Category"] == "Furniture", "Price"] *= 0.10
 
 # # Step 2: Recalculate Total
-# df["Total"] = df["Quantity"] * df["Price"]
+df["Total"] = df["Quantity"] * df["Price"]
 
 # # Step 3: Show only Furniture rows
-# print(df[df["Category"] == "Furniture"])
+print(df[df["Category"] == "Furniture"])
 
 # #Exercise 11:
 # # Step 1: Sort by Total descending
-# sorted_df = df.sort_values(by="Total", ascending=False)
-# print(sorted_df.head())
+sorted_df = df.sort_values(by="Total", ascending=False)
+print(sorted_df.head())
 
 # # Step 2: Show top 5 sales
-# print(sorted_df.head(5))
+print(sorted_df.head(5))
 
 # # Step 3: Multi-level sort (Region then Customer)
-# multi_sort = df.sort_values(by=["Region", "Customer"])
-# print(multi_sort.head())
+multi_sort = df.sort_values(by=["Region", "Customer"])
+print(multi_sort.head())
